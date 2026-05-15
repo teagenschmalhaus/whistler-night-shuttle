@@ -139,13 +139,14 @@ section { padding: 96px 0; }
 }
 
 .nav-logo {
-  color: var(--white);
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: -0.2px;
-  transition: color 0.3s;
+  display: flex;
+  align-items: center;
 }
-#site-header.scrolled .nav-logo { color: var(--navy); }
+.nav-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
