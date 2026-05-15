@@ -4,7 +4,15 @@
       "Bash(gh repo *)",
       "Bash(open *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(dig whistlernightshuttle.com A +short)",
+      "Bash(dig www.whistlernightshuttle.com CNAME +short)",
+      "Bash(gh api *)",
+      "Bash(dig _acme-challenge.whistlernightshuttle.com TXT +short)",
+      "Bash(dig whistlernightshuttle.com ANY +short)",
+      "Bash(dig whistlernightshuttle.com AAAA +short)",
+      "Bash(dig whistlernightshuttle.com CAA +short)"
     ]
   }
 }
