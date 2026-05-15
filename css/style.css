@@ -37,10 +37,20 @@ img { max-width: 100%; display: block; }
 
 h2 {
   font-size: clamp(1.7rem, 3vw, 2.3rem);
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 8px;
   color: var(--navy);
-  letter-spacing: -0.3px;
+  letter-spacing: -0.5px;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
 }
 
 .heading-accent {
@@ -190,7 +200,7 @@ section { padding: 96px 0; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../Whistler.png') center center / cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1693614076723-f96c711cbc4f?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
   padding: 0 32px;
 }
 
@@ -199,9 +209,9 @@ section { padding: 96px 0; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10,22,40,0.65) 0%,
-    rgba(10,22,40,0.50) 60%,
-    rgba(10,22,40,0.65) 100%
+    rgba(10,22,40,0.75) 0%,
+    rgba(10,22,40,0.35) 50%,
+    rgba(10,22,40,0.75) 100%
   );
 }
 
@@ -225,11 +235,11 @@ section { padding: 96px 0; }
 }
 
 .hero-content h1 {
-  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-  font-weight: 800;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 900;
   color: var(--white);
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  line-height: 1.1;
+  letter-spacing: -1px;
   margin-bottom: 20px;
 }
 
@@ -238,6 +248,50 @@ section { padding: 96px 0; }
   color: rgba(255,255,255,0.85);
   margin-bottom: 36px;
   line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.45);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.8);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.hero-scroll-hint span {
+  display: block;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  margin: 0 auto;
+  animation: scrollHint 1.8s ease-in-out infinite;
+}
+@keyframes scrollHint {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
 }
 
 /* ===== CREDENTIAL BAR ===== */
@@ -255,23 +309,23 @@ section { padding: 96px 0; }
   gap: 0;
 }
 
-.cred-stat {
+.credential-stat {
   flex: 1;
   text-align: center;
   padding: 0 24px;
 }
 
-.cred-value {
+.credential-stat strong {
   display: block;
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 2.6rem;
+  font-weight: 900;
   color: var(--white);
   letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 6px;
 }
 
-.cred-label {
+.credential-stat span {
   display: block;
   font-size: 0.8rem;
   color: rgba(255,255,255,0.5);
@@ -280,7 +334,7 @@ section { padding: 96px 0; }
   font-weight: 500;
 }
 
-.cred-divider {
+.credential-divider {
   width: 1px;
   height: 48px;
   background: rgba(255,255,255,0.12);
@@ -293,7 +347,7 @@ section { padding: 96px 0; }
   padding: 96px 0;
 }
 
-.steps {
+.steps-grid {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -337,7 +391,7 @@ section { padding: 96px 0; }
 }
 
 /* ===== ABOUT / FEATURES ===== */
-.about { background: var(--white); }
+.about { background: var(--light); }
 
 .features-grid {
   display: grid;
@@ -655,12 +709,12 @@ textarea { resize: vertical; }
 
   .credential-bar { padding: 28px 20px; }
   .credential-bar-inner { gap: 0; }
-  .cred-stat { padding: 0 12px; }
-  .cred-value { font-size: 1.6rem; }
-  .cred-label { font-size: 0.7rem; }
-  .cred-divider { height: 36px; }
+  .credential-stat { padding: 0 12px; }
+  .credential-stat strong { font-size: 1.6rem; }
+  .credential-stat span { font-size: 0.7rem; }
+  .credential-divider { height: 36px; }
 
-  .steps { flex-direction: column; align-items: center; gap: 32px; }
+  .steps-grid { flex-direction: column; align-items: center; gap: 32px; }
   .step-arrow { transform: rotate(90deg); margin: -16px 0; }
   .step { padding: 0 16px; }
 
