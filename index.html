@@ -27,10 +27,14 @@
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
 
-  <!-- Google Fonts -->
+  <!-- Hero image preload -->
+  <link rel="preload" href="Untitled 2.png" as="image" />
+
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" /></noscript>
 
   <link rel="stylesheet" href="css/style.css" />
 
@@ -503,6 +507,7 @@
         <a href="#book">Book Now</a>
         <a href="#contact">Contact</a>
         <a href="whistler-to-yvr.html">Whistler &rarr; YVR</a>
+        <a href="squamish-shuttle.html">Squamish</a>
       </div>
     </div>
     <div class="footer-bottom">
