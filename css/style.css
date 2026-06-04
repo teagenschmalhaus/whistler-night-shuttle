@@ -201,7 +201,7 @@ section { padding: 96px 0; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../Untitled 2.png') center center / cover no-repeat;
+  background: url('../hero.jpg') center center / cover no-repeat;
   padding: 0 32px;
 }
 
@@ -768,8 +768,9 @@ textarea { resize: vertical; }
 /* ===== BLOG INDEX ===== */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 400px));
   gap: 32px;
+  justify-content: center;
 }
 
 .blog-card {
@@ -846,7 +847,7 @@ textarea { resize: vertical; }
 .article-wrap {
   max-width: 760px;
   margin: 0 auto;
-  padding: 64px 32px 96px;
+  padding: 48px 32px 80px;
 }
 
 .article-back {
@@ -880,7 +881,7 @@ textarea { resize: vertical; }
   font-size: 1.45rem;
   font-weight: 800;
   color: var(--navy);
-  margin: 44px 0 16px;
+  margin: 36px 0 14px;
   letter-spacing: -0.4px;
   line-height: 1.25;
 }
