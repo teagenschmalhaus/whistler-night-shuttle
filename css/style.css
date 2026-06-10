@@ -202,6 +202,7 @@ section { padding: 96px 0; }
   justify-content: center;
   text-align: center;
   background: url('../hero.jpg') center center / cover no-repeat;
+  background-image: image-set(url('../hero.webp') type('image/webp'), url('../hero.jpg') type('image/jpeg'));
   padding: 0 32px;
 }
 
