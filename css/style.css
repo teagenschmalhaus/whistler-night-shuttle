@@ -996,6 +996,7 @@ textarea { resize: vertical; }
   .form-row { grid-template-columns: 1fr; }
   .booking-form { padding: 28px 20px; }
   .booking-layout { grid-template-columns: 1fr; gap: 32px; }
+  .booking-form-wrap { order: -1; }
 
   .pricing-cards { flex-direction: column; }
 
