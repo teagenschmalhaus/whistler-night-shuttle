@@ -348,6 +348,10 @@ section { padding: 96px 0; }
   font-weight: 500;
 }
 
+.credential-highlight {
+  color: var(--gold);
+}
+
 .credential-divider {
   width: 1px;
   height: 48px;
