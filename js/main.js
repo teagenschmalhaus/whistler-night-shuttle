@@ -38,6 +38,13 @@ form.addEventListener('submit', async (e) => {
       successMsg.style.display = 'block';
       errorMsg.style.display = 'none';
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-16871618053/kL1yCLrKp94cEIXsge0-',
+          'value': 300.0,
+          'currency': 'USD',
+        });
+      }
     } else {
       throw new Error('Submission failed');
     }
